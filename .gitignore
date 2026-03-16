@@ -1,0 +1,35 @@
+# GCP credentials — never commit these
+*.json
+credentials/
+secrets/
+
+# Kaggle credentials
+.kaggle/
+
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Airflow
+airflow.db
+airflow.cfg
