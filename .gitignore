@@ -8,7 +8,9 @@ secrets/
 
 # Environment variables
 .env
-.env.*
+.env.local
+.env.*.local
+!.env.example
 
 # Python
 __pycache__/
@@ -33,3 +35,13 @@ Thumbs.db
 # Airflow
 airflow.db
 airflow.cfg
+
+# Terraform
+terraform.tfvars
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
+data/

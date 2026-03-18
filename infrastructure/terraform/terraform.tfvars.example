@@ -1,0 +1,4 @@
+project_id           = "your-gcp-project-id"
+region               = "europe-west2"
+gcs_bucket_name      = "home-credit-raw-data-yourname"
+service_account_name = "home-credit-pipeline"
