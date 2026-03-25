@@ -7,13 +7,7 @@ This script:
 2. Validates each file exists and is readable
 3. Uploads to GCS bucket in parallel (max 3 concurrent uploads)
 4. Logs progress and any errors
-
-Usage:
-    python ingestion/scripts/load_to_gcs.py
-"""
-
-import os
-import logging
+ 
 from pathlib import Path
 from dotenv import load_dotenv
 from google.cloud import storage
