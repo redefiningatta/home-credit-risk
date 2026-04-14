@@ -1,0 +1,71 @@
+version: 2
+
+sources:
+  - name: raw
+    database: home-credit-risk-490505
+    schema: raw
+    tables:
+      - name: application_train
+        description: "Main application table — one row per loan application"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/application_train.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+            allow_quoted_newlines: true
+
+      - name: bureau
+        description: "Credit bureau history from other institutions"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/bureau.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      - name: bureau_balance
+        description: "Monthly balance of bureau credits"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/bureau_balance.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      - name: previous_application
+        description: "Previous loan applications at Home Credit"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/previous_application.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      - name: pos_cash_balance
+        description: "Monthly balance of previous POS and cash loans"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/POS_CASH_balance.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      - name: credit_card_balance
+        description: "Monthly balance of previous credit cards"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/credit_card_balance.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      - name: installments_payments
+        description: "Payment history of previous loans"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/installments_payments.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      - name: home_credit_columns_description
+        description: "Data dictionary for all columns"
+        external:
+          location: "gs://home-credit-raw-data-pete/home-credit/raw/HomeCredit_columns_description.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
